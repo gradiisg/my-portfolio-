@@ -8,7 +8,9 @@
 
 </head>
 
-<body style="font-family: Arial; margin: 0; background: #eef2f7; color: #222;">
+<body id="page" style="font-family: Arial; margin: 0; background: #eef2f7; color: #222;">
+
+<button onclick="darkMode()">Dark Mode</button>
 
     <!-- HEADER -->
 
@@ -62,13 +64,27 @@
 
         </div>
 
-        <!-- CONTACT -->
+<div style="background:white; padding:20px; margin-bottom:20px; border-radius:10px; text-align:center;">
+
+<h2>Followers Counter</h2>
+
+<h1 id="count">0</h1>
+
+<button onclick="increase()">+1 Follower</button>
+
+<button onclick="resetCount()">Reset</button>
+
+</div>
+        
+
+<!-- CONTACT -->
 
         <div style="background: white; padding: 20px; border-radius: 10px; text-align: center;">
 
-            <h2>Contact</h2>
+          <h2>Contact</h2>
 
-            <p>Contact coming soon</p>
+<p>Contact coming soon</p>
+
 <button onclick="alert('Hello! Welcome to my portfolio 🚀')">
 
   Click Me
@@ -96,6 +112,37 @@
         </div>
 
     </div>
+
+
+<script>
+
+function darkMode() {
+
+    document.getElementById("page").style.background = "#121212";
+
+    document.getElementById("page").style.color = "#222";
+
+}
+let count = 0;
+
+function increase() {
+
+    count = count + 1;
+
+    document.getElementById("count").innerHTML = count;
+
+}
+
+function resetCount() {
+
+    count = 0;
+
+    document.getElementById("count").innerHTML = count;
+
+}
+
+</script>
+
 
 </body>
 
